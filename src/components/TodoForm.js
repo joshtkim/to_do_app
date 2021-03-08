@@ -4,11 +4,16 @@ function TodoForm(props) {
   const [input, setInput] = useState('')
 
   const handleChange = e => {
-    setInput(e.value)
+    setInput(e.target.value)
   }
 
   const handleSubmit = e => {
     e.preventDefault()
+
+    props.onSubmit({
+      id: input,
+      text: input
+    })
 
     setInput('')
   }
