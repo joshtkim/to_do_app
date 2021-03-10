@@ -36,8 +36,6 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
         onClick={() => setEdit( {id: todo.id, value: todo.text })}
         className="edit-icon"/>
       </div>
-
-
     </div>
   ));
 };
