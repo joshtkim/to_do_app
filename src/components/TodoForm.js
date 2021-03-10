@@ -7,11 +7,14 @@ function TodoForm(props) {
     setInput(e.target.value)
   }
 
+  let today = new Date();
+  let seconds = today.getDate() + '-' + today.getMinutes() + ':' + today.getSeconds();
+
   const handleSubmit = e => {
     e.preventDefault()
 
     props.onSubmit({
-      id: input,
+      id: seconds,
       text: input
     })
 

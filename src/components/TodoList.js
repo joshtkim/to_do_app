@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Todo from './Todo'
 import TodoForm from './TodoForm'
 
 function TodoList() {
@@ -16,9 +17,10 @@ function TodoList() {
 
 
   return (
-    <div>
+    <div className="todo-list">
       <h1>Todo List</h1>
       <TodoForm onSubmit={addTodo}/>
+      <Todo todos={todos} completeTodo={completeTodo} />
     </div>
   )
 }
